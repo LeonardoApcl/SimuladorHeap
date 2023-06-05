@@ -1,0 +1,10 @@
+heap first
+new a 5
+new b 3
+new c 8
+exibe
+del b
+b = a
+exibe
+new d 2
+del b
