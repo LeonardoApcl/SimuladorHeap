@@ -15,4 +15,4 @@
 
 ## O código:
 
- O código feito em c irá ler o arquivo "entrada.txt" e a partir dele fará as manipulações desejedas obedecendo a sintaxe mostrada.
+ O código feito em c irá ler o arquivo "entrada.txt" e a partir dele fará as manipulações desejadas obedecendo a sintaxe mostrada.
