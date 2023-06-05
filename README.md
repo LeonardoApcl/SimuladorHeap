@@ -3,7 +3,7 @@
 ## O objetivo:
 
 * Fazer um programa para simular a manipulação de memória num heap
-* Segue um programa exemplo e a gramática dalinguagem a ser utilizada:
+* Segue um programa exemplo e a gramática da linguagem a ser utilizada:
 
 * Sintaxe:
   
