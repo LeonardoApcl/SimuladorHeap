@@ -68,7 +68,26 @@ list *First( list* V, list *L, char *id, int b, int *f){
     return V;
 }
 
-void Next(){}
+list *Next( list *V, list *livre, list **Pnext, char *id, int b){    // função next sempre parte do pressuposto que a heap tem area livre para armazenar
+    
+    if( *Pnext == NULL){
+        *Pnext = livre;
+    }
+    if( (*Pnext)->blocos >=b){
+        
+        list *aux= (list*)malloc(sizeof(list));                             
+        
+        strcpy(aux->id, id);
+        aux->indice= (*Pnext)->indice;
+        aux->blocos= b;
+        aux->prox= V;
+        return aux;
+    }
+    else{
+        *Pnext= (*Pnext)->prox;
+        return Next(V, livre, Pnext, id, b);
+    }
+}
 
 int auxBestWorst(bool flag, list *L, int b, int indice, int dif){
     
@@ -289,7 +308,9 @@ int main()
                 
                 case 2:
                 
-                     //Var= Next(Var, AreaL, id, blocos)
+                    list *PonteiroNext;   
+                    
+                    Var= Next(Var, AreaL, &PonteiroNext, id, blocos); // não consegui implementar o next para caso não haja espaço na heap
                     
                 break;
                 
